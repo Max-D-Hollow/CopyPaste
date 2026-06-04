@@ -1,0 +1,46 @@
+# Deshabilitar temporalmente los repos problemáticos
+
+echo "deb [trusted=yes] https://packages-cf.termux.dev/apt/termux-main-21 stable main" > $PREFIX/etc/apt/sources.list
+
+
+
+# Actualizar
+pkg update -y
+
+
+
+# Instalar termux-keyring (actualiza las claves GPG)
+
+pkg install termux-keyring -y
+
+
+
+Si aún da error, haz esto en su lugar:
+
+pkg update -y --allow-unauthenticated
+
+pkg install termux-keyring -y
+
+pkg update -y   # ahora sí con claves actualizadas
+
+
+
+# SSH
+
+pkg install openssh -y
+
+
+
+# Tailscale
+
+pkg install tailscale -y
+
+
+
+# proot-distro (para tener Linux completo)
+
+pkg install proot-distro -y
+
+proot-distro install debian
+
+proot-distro login debian
