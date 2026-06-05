@@ -1,10 +1,31 @@
 
 
 
-pkg install binutils -y && readelf -l $HOME/debian-fs/usr/bin/bash | grep "interpreter\|INTERP"
+# 1. Eliminar el enlace simbólico /lib
 
+rm $HOME/debian-fs/lib
 
-pkg install file -y && file $HOME/debian-fs/usr/bin/bash
+# 2. Copiar TODO el contenido de /usr/lib a /lib como directorio real
+
+cp -r $HOME/debian-fs/usr/lib $HOME/debian-fs/lib
+
+# 3. Eliminar el enlace simbólico /bin
+
+rm $HOME/debian-fs/bin
+
+# 4. Copiar TODO el contenido de /usr/bin a /bin como directorio real
+
+cp -r $HOME/debian-fs/usr/bin $HOME/debian-fs/bin
+
+# 5. Hacer lo mismo con /sbin
+
+rm $HOME/debian-fs/sbin
+
+cp -r $HOME/debian-fs/usr/sbin $HOME/debian-fs/sbin
+
+# 6. Probar entrar
+
+proot -0 -r $HOME/debian-fs -b /dev -b /proc -b /sys -w /root /bin/bash
 
 
 
