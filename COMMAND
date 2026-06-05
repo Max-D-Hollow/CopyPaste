@@ -1,7 +1,25 @@
-https://github.com/tailscale/tailscale.git
+
+
+wget -qO- "https://github.com/termux/proot-distro/releases/download/v4.0.0/debian-trixie-aarch64-pd-v4.0.0.tar.xz" | tar -xJ -C debian-fs/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################
 # proot-distro (para tener Linux completo)
 
 pkg install proot-distro -y
