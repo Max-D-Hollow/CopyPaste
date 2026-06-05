@@ -1,9 +1,7 @@
 
 
-ls -la $HOME/debian-fs/usr/bin/env 2>/dev/null; echo "---"; ls $HOME/debian-fs/usr/bin/ | head -20
-2. También verifica el directorio home:
-ls -la $HOME/debian-fs/root/
 
+readelf -l $HOME/debian-fs/usr/bin/dash 2>/dev/null | grep -i "interp\|interpreter" || file $HOME/debian-fs/usr/bin/dash
 
 
 
