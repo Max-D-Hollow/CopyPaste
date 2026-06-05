@@ -1,8 +1,11 @@
 
 
 
-readelf -l $HOME/debian-fs/usr/bin/dash 2>/dev/null | grep -i "interp\|interpreter" || file $HOME/debian-fs/usr/bin/dash
+ls -la $HOME/debian-fs/lib/arm-linux-gnueabihf/ld-linux-armhf.so.3 2>/dev/null
 
+ls $HOME/debian-fs/lib/arm-linux-gnueabihf/ 2>/dev/null | head -10
+
+ls $HOME/debian-fs/usr/lib/arm-linux-gnueabihf/ 2>/dev/null | head -10
 
 
 
