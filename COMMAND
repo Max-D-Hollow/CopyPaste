@@ -1,19 +1,8 @@
 
 
-wget https://github.com/termux/proot-distro/releases/download/v4.17.3/debian-bookworm-aarch64-pd-v4.17.3.tar.xz
-4️⃣ Extrae en la carpeta:
-tar -xJf debian-bookworm-aarch64-pd-v4.17.3.tar.xz -C $HOME/debian-fs/
-5️⃣ Entra en Debian:
-proot -0 -r $HOME/debian-fs -b /dev -b /proc -b /sys -b $HOME -w /root /usr/bin/env -i HOME=/root PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin TERM=$TERM LANG=C.UTF-8 /bin/bash
-
-
-
-
-
-
-
-
-
+ls -la $HOME/debian-fs/usr/bin/env 2>/dev/null; echo "---"; ls $HOME/debian-fs/usr/bin/ | head -20
+2. También verifica el directorio home:
+ls -la $HOME/debian-fs/root/
 
 
 
