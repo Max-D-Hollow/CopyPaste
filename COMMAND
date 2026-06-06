@@ -1,17 +1,15 @@
 
 
 
-proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys /lib/ld-musl-armhf.so.1 /bin/busybox sh -l
+
 
 
 
 
 
 #####################################################
-# proot-distro (para tener Linux completo)
 
-pkg install proot-distro -y
+INICIAR ALPINE
+proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys /lib/ld-musl-armhf.so.1 /bin/busybox sh -l
 
-proot-distro install debian
-
-proot-distro login debian
+#####################################################
