@@ -1,7 +1,7 @@
 
 
 
-
+proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys -b /etc /lib/ld-musl-armhf.so.1 /bin/busybox sh -l
 
 
 
