@@ -1,7 +1,9 @@
 
 
+mkdir -p /lib/apk/db
+/sbin/apk update
+/sbin/apk add bash
 
-proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys -b /etc /lib/ld-musl-armhf.so.1 /bin/busybox sh -l
 
 
 
@@ -10,6 +12,9 @@ proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys -b /etc /lib/ld-musl-armhf.so
 #####################################################
 
 INICIAR ALPINE
+
 proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys /lib/ld-musl-armhf.so.1 /bin/busybox sh -l
+
+proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys -b /etc /lib/ld-musl-armhf.so.1 /bin/busybox sh -l
 
 #####################################################
