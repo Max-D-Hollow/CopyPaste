@@ -1,12 +1,7 @@
 
 
 
-proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys /bin/busybox cat /etc/os-release
-
-
-file ~/alpine-fs/bin/busybox
-
-
+proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys /lib/ld-musl-armhf.so.1 /bin/busybox cat /etc/os-release
 
 
 
