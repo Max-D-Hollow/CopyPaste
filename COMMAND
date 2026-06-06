@@ -1,9 +1,8 @@
 
-
-mkdir -p /lib/apk/db
+echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/main" > /etc/apk/repositories
+echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/community" >> /etc/apk/repositories
 /sbin/apk update
 /sbin/apk add bash
-
 
 
 
