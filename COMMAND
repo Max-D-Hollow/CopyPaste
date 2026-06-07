@@ -1,6 +1,7 @@
 
 
-echo "alias alpine='proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys /lib/ld-musl-armhf.so.1 /bin/bash -l'" >> ~/.zshrc
+ls -la /storage/sdcard1 /mnt/sdcard /mnt/external_sd 2>/dev/null
+mount | grep -i sdcard
 
 
 
