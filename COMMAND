@@ -1,7 +1,6 @@
 
 
-echo "alias alpine='proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys /lib/ld-musl-armhf.so.1 /bin/bash -l'" >> ~/.bashrc
-source ~/.bashrc
+echo "alias alpine='proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys /lib/ld-musl-armhf.so.1 /bin/bash -l'" >> ~/.zshrc
 
 
 
