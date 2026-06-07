@@ -1,7 +1,16 @@
 
 
-proot -r ~/alpine-fs -w / -b /dev -b /proc -b /sys -b /etc/resolv.conf /lib/ld-musl-armhf.so.1 /bin/busybox sh -l
-
+/bin/busybox sh -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+2. Crear directorio de base de datos de apk (esto ya lo hiciste, pero confirmamos):
+/bin/busybox mkdir -p /lib/apk/db
+3. Crear directorio de repositorios:
+/bin/busybox mkdir -p /etc/apk
+4. Crear archivo de repositorios:
+/bin/busybox sh -c 'echo "https://dl-cdn.alpinelinux.org/alpine/v3.21/main" > /etc/apk/repositories'
+5. Probar apk update:
+/sbin/apk update
+6. Instalar bash:
+/sbin/apk add bash
 
 
 
