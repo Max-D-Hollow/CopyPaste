@@ -1,5 +1,9 @@
 
 
+curl -L "https://raw.githubusercontent.com/xero/figlet-fonts/master/ANSI%20Shadow.flf" \
+  -o "$(figlet -I2)/ANSI Shadow.flf"
+
+
 ls -la /storage/sdcard1 /mnt/sdcard /mnt/external_sd 2>/dev/null
 mount | grep -i sdcard
 
